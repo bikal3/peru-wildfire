@@ -1,22 +1,24 @@
 import Image from 'next/image'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 const CHARTS = [
   {
     title: 'Annual Fire Trend',
     caption: 'Total hotspots per year · NASA FIRMS',
-    src: '/charts/annual_fire_trend.png',
+    src: `${BASE}/charts/annual_fire_trend.png`,
     alt: 'Bar chart showing annual fire hotspot counts for Peru',
   },
   {
     title: 'Monthly Distribution',
     caption: 'Jan–Dec distribution · peak: August–September',
-    src: '/charts/fire_incidents_by_month.png',
+    src: `${BASE}/charts/fire_incidents_by_month.png`,
     alt: 'Bar chart of fire hotspots by month showing Aug–Sep peak',
   },
   {
     title: 'Seasonal Decomposition',
     caption: 'STL trend · seasonal · residual components',
-    src: '/charts/monthly_fire_decomposition.png',
+    src: `${BASE}/charts/monthly_fire_decomposition.png`,
     alt: 'STL decomposition plot of monthly fire time series',
   },
 ]
