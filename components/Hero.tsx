@@ -33,7 +33,9 @@ export default function Hero() {
       </div>
       <div className="flex gap-4">
         <a
-          href="https://github.com"
+          href="https://github.com/bikal3/peru-wildfire"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sm text-green-200 border-b border-green-400 hover:text-white transition-colors"
         >
           GitHub
