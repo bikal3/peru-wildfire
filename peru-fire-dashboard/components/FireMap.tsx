@@ -6,6 +6,8 @@ import { LAYERS, PERU_VIEW, MAP_STYLE, LayerId } from '@/lib/constants'
 
 const DEFAULT_ON: LayerId[] = ['hotspots', 'protected']
 
+const DATA_URL = Object.fromEntries(LAYERS.map(l => [l.id, l.dataUrl])) as Record<LayerId, string>
+
 export default function FireMap() {
   const [active, setActive] = useState<Set<LayerId>>(new Set(DEFAULT_ON))
 
@@ -44,7 +46,7 @@ export default function FireMap() {
 
           {/* Fire hotspot heatmap */}
           {active.has('hotspots') && (
-            <Source id="hotspots" type="geojson" data="/data/fire_hotspots.geojson">
+            <Source id="hotspots" type="geojson" data={DATA_URL.hotspots}>
               <Layer
                 id="hotspots-heat"
                 type="heatmap"
@@ -67,7 +69,7 @@ export default function FireMap() {
 
           {/* Protected areas */}
           {active.has('protected') && (
-            <Source id="protected" type="geojson" data="/data/protected_areas.geojson">
+            <Source id="protected" type="geojson" data={DATA_URL.protected}>
               <Layer
                 id="protected-fill"
                 type="fill"
@@ -83,7 +85,7 @@ export default function FireMap() {
 
           {/* Indigenous territories */}
           {active.has('indigenous') && (
-            <Source id="indigenous" type="geojson" data="/data/indigenous_territories.geojson">
+            <Source id="indigenous" type="geojson" data={DATA_URL.indigenous}>
               <Layer
                 id="indigenous-fill"
                 type="fill"
@@ -99,7 +101,7 @@ export default function FireMap() {
 
           {/* Country boundary */}
           {active.has('boundary') && (
-            <Source id="boundary" type="geojson" data="/data/country_boundary.geojson">
+            <Source id="boundary" type="geojson" data={DATA_URL.boundary}>
               <Layer
                 id="boundary-line"
                 type="line"
