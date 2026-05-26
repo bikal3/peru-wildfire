@@ -10,7 +10,17 @@ export default function Hero() {
       <p className="text-xs tracking-widest uppercase text-green-300 mb-2">
         Geospatial Research · 2025
       </p>
-      <p className="text-xs text-green-400 mb-3">By Bikal Shrestha</p>
+      <p className="text-xs text-green-400 mb-3">
+        By{' '}
+        <a
+          href="https://bikal3.com.np/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-b border-green-500 hover:text-white transition-colors"
+        >
+          Bikal Shrestha
+        </a>
+      </p>
       <h1 className="text-3xl font-bold text-white leading-tight mb-1">
         Wildfire Hotspot Analysis in Peru
       </h1>
