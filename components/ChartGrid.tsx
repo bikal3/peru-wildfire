@@ -12,10 +12,10 @@ const CHARTS = [
     alt: 'Bar chart showing annual fire hotspot counts for Peru',
   },
   {
-    title: 'Monthly Distribution',
-    caption: 'Jan–Dec distribution · peak: August–September',
-    src: `${BASE}/charts/fire_incidents_by_month.png`,
-    alt: 'Bar chart of fire hotspots by month showing Aug–Sep peak',
+    title: 'Year × Month Heatmap',
+    caption: 'Fire intensity by year and month · 2000–2024',
+    src: `${BASE}/charts/fire_year_month_heatmap.png`,
+    alt: 'Heatmap showing fire hotspot counts by year and month',
   },
   {
     title: 'Seasonal Decomposition',
