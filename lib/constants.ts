@@ -1,5 +1,7 @@
 // lib/constants.ts
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 export const STATS = [
   { value: '32,364', label: 'Fire Hotspots', color: '#e63946' },
   { value: '1.0%', label: 'Inside Protected Areas', color: '#2d6a4f' },
@@ -20,25 +22,25 @@ export const LAYERS = [
     id: 'hotspots' as const,
     label: '🔴 Fire Hotspots',
     color: '#e63946',
-    dataUrl: '/data/fire_hotspots.geojson',
+    dataUrl: `${BASE}/data/fire_hotspots.geojson`,
   },
   {
     id: 'protected' as const,
     label: '🟩 Protected Areas',
     color: '#2d6a4f',
-    dataUrl: '/data/protected_areas.geojson',
+    dataUrl: `${BASE}/data/protected_areas.geojson`,
   },
   {
     id: 'indigenous' as const,
     label: '🟣 Indigenous Territories',
     color: '#8338ec',
-    dataUrl: '/data/indigenous_territories.geojson',
+    dataUrl: `${BASE}/data/indigenous_territories.geojson`,
   },
   {
     id: 'boundary' as const,
     label: '⬜ Country Boundary',
     color: '#457b9d',
-    dataUrl: '/data/country_boundary.geojson',
+    dataUrl: `${BASE}/data/country_boundary.geojson`,
   },
 ] as const
 
