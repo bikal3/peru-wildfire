@@ -6,10 +6,10 @@ export default function Footer() {
     >
       <span>© 2025 · Peru Fire Analysis · Built with Next.js + MapLibre GL</span>
       <div className="flex gap-5">
-        <a href="https://github.com" className="border-b border-green-500 hover:text-white transition-colors">
+        <a href="https://github.com/bikal3/peru-wildfire" target="_blank" rel="noopener noreferrer" className="border-b border-green-500 hover:text-white transition-colors">
           GitHub
         </a>
-        <a href="/data/fire_hotspots.geojson" className="border-b border-green-500 hover:text-white transition-colors">
+        <a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/data/fire_hotspots.geojson`} className="border-b border-green-500 hover:text-white transition-colors">
           Download Data
         </a>
       </div>
