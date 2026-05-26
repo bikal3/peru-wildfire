@@ -4,7 +4,7 @@ export default function Footer() {
       className="px-8 py-4 flex flex-wrap justify-between items-center text-sm gap-4"
       style={{ background: '#1b3a2d', color: '#95d5b2' }}
     >
-      <span>© 2025 · Peru Fire Analysis · Built with Next.js + MapLibre GL</span>
+      <span>© 2025 Bikal Shrestha · Peru Fire Analysis · Built with Next.js + MapLibre GL</span>
       <div className="flex gap-5">
         <a href="https://github.com/bikal3/peru-wildfire" target="_blank" rel="noopener noreferrer" className="border-b border-green-500 hover:text-white transition-colors">
           GitHub
